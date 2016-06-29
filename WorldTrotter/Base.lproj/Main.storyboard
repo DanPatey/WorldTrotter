@@ -89,6 +89,16 @@
             </objects>
             <point key="canvasLocation" x="799" y="1021"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="mB4-0I-BnN">
+            <objects>
+                <viewController id="9LN-Yr-7ZP" customClass="mapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="Cbu-0d-8iI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNZ-ds-DA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440" y="1021"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pTI-VB-jIM">
             <objects>
@@ -100,6 +110,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iHG-7G-Ikm"/>
+                        <segue destination="9LN-Yr-7ZP" kind="relationship" relationship="viewControllers" id="cUk-OI-yzG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oW7-BZ-7rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,5 +120,6 @@
     </scenes>
     <resources>
         <image name="ConvertIcon" width="49" height="33"/>
+        <image name="MapIcon" width="49" height="33"/>
     </resources>
 </document>
