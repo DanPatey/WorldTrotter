@@ -49,8 +49,6 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("ConversionViewController loaded its view.")
     }
     
     let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate())

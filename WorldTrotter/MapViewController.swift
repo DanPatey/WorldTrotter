@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class mapViewController: UIViewController {
+class MapViewController: UIViewController {
     
     var mapView: MKMapView!
     
@@ -22,7 +22,7 @@ class mapViewController: UIViewController {
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
         segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: "mapTypeChanged:", forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), forControlEvents: .ValueChanged)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(segmentedControl)
@@ -39,8 +39,6 @@ class mapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("MapViewController loaded its view.")
     }
     
     func mapTypeChanged(segControl: UISegmentedControl) {
