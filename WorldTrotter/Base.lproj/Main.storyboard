@@ -103,7 +103,7 @@
         <scene sceneID="nvl-PL-jsV">
             <objects>
                 <viewController id="iLm-qQ-Ii3" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Website" id="RCw-8O-cgF"/>
+                    <tabBarItem key="tabBarItem" title="Website" image="ConvertIcon" id="RCw-8O-cgF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iar-Z0-5NN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

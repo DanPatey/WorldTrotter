@@ -37,10 +37,6 @@ class MapViewController: UIViewController {
         trailingConstraint.active = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func mapTypeChanged(segControl: UISegmentedControl) {
         switch segControl.selectedSegmentIndex {
         case 0:
@@ -52,5 +48,9 @@ class MapViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
