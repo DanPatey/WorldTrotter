@@ -19,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5718B67B1D2621F3006CA028 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		5718B67D1D26227B006CA028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		57855BE71D237C2B00F6DE7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		57855BE91D2382BE00F6DE7F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		57855BEB1D23980800F6DE7F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				57902E2E1D1F4F1900168948 /* Base */,
+				5718B67B1D2621F3006CA028 /* es */,
+				5718B67D1D26227B006CA028 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
