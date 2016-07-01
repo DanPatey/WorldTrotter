@@ -16,6 +16,7 @@
 		57902E311D1F4F1900168948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57902E301D1F4F1900168948 /* Assets.xcassets */; };
 		57902E341D1F4F1900168948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57902E321D1F4F1900168948 /* LaunchScreen.storyboard */; };
 		57902E3C1D1F59E900168948 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57902E3B1D1F59E900168948 /* ConversionViewController.swift */; };
+		579453D31D26247A00AE2793 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 579453D51D26247A00AE2793 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		57902E331D1F4F1900168948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57902E351D1F4F1900168948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57902E3B1D1F59E900168948 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
+		579453D41D26247A00AE2793 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		579453D61D26248900AE2793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		579453D71D26248B00AE2793 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				57902E2D1D1F4F1900168948 /* Main.storyboard */,
 				57902E301D1F4F1900168948 /* Assets.xcassets */,
 				57902E321D1F4F1900168948 /* LaunchScreen.storyboard */,
+				579453D51D26247A00AE2793 /* Localizable.strings */,
 				57902E351D1F4F1900168948 /* Info.plist */,
 			);
 			path = WorldTrotter;
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57902E341D1F4F1900168948 /* LaunchScreen.storyboard in Resources */,
+				579453D31D26247A00AE2793 /* Localizable.strings in Resources */,
 				57902E311D1F4F1900168948 /* Assets.xcassets in Resources */,
 				57902E2F1D1F4F1900168948 /* Main.storyboard in Resources */,
 			);
@@ -177,6 +183,16 @@
 				57902E331D1F4F1900168948 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		579453D51D26247A00AE2793 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579453D41D26247A00AE2793 /* es */,
+				579453D61D26248900AE2793 /* Base */,
+				579453D71D26248B00AE2793 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
