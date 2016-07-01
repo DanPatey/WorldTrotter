@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Convert-->
@@ -17,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3W-rU-yeV">
-                                <rect key="frame" x="176" y="28" width="250" height="84"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3W-rU-yeV">
+                                <rect key="frame" x="175" y="28" width="250" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="hIN-tT-3Gv"/>
                                 </constraints>
@@ -30,27 +31,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="BZz-Kz-VoK"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-G1-cEO">
-                                <rect key="frame" x="148" y="120" width="306" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-G1-cEO">
+                                <rect key="frame" x="147" y="120" width="306" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Use-3d-nQ7">
-                                <rect key="frame" x="241" y="171" width="119" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Use-3d-nQ7">
+                                <rect key="frame" x="240" y="171" width="119" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-mC-5un">
-                                <rect key="frame" x="243" y="222" width="117" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-nh-dp2">
+                                <rect key="frame" x="173" y="314" width="254" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-nh-dp2">
-                                <rect key="frame" x="174" y="314" width="254" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-mC-5un">
+                                <rect key="frame" x="242" y="222" width="117" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,13 +63,21 @@
                             <constraint firstItem="Wgf-G1-cEO" firstAttribute="top" secondItem="N3W-rU-yeV" secondAttribute="bottom" constant="8" id="AIj-iz-OV0"/>
                             <constraint firstItem="N3W-rU-yeV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="BOC-zg-xt4"/>
                             <constraint firstItem="N3W-rU-yeV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BSV-dy-bQj"/>
+                            <constraint firstItem="i4R-nh-dp2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ddr-sb-awb"/>
+                            <constraint firstItem="Ha4-mC-5un" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KR6-Id-2b6"/>
                             <constraint firstItem="i4R-nh-dp2" firstAttribute="top" secondItem="Ha4-mC-5un" secondAttribute="bottom" constant="8" id="Pb7-2h-wd4"/>
                             <constraint firstItem="Use-3d-nQ7" firstAttribute="centerX" secondItem="Wgf-G1-cEO" secondAttribute="centerX" id="Y9Q-ri-9yR"/>
                             <constraint firstItem="Use-3d-nQ7" firstAttribute="centerX" secondItem="Wgf-G1-cEO" secondAttribute="centerX" id="ZPX-zd-kGF"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Wgf-G1-cEO" secondAttribute="trailing" id="blC-h4-c1j"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="i4R-nh-dp2" secondAttribute="trailing" id="chH-B0-I3V"/>
                             <constraint firstItem="Use-3d-nQ7" firstAttribute="top" secondItem="Wgf-G1-cEO" secondAttribute="bottom" constant="8" id="doz-U9-dna"/>
                             <constraint firstItem="Wgf-G1-cEO" firstAttribute="centerX" secondItem="N3W-rU-yeV" secondAttribute="centerX" id="euF-oN-Crq"/>
                             <constraint firstItem="Ha4-mC-5un" firstAttribute="top" secondItem="Use-3d-nQ7" secondAttribute="bottom" constant="8" id="glY-tt-b0e"/>
+                            <constraint firstItem="Use-3d-nQ7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="p0d-hG-xRj"/>
                             <constraint firstItem="i4R-nh-dp2" firstAttribute="centerX" secondItem="Wgf-G1-cEO" secondAttribute="centerX" id="q9G-m5-dgq"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ha4-mC-5un" secondAttribute="trailing" id="ukJ-hQ-lHB"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Use-3d-nQ7" secondAttribute="trailing" id="wfZ-we-lyr"/>
+                            <constraint firstItem="Wgf-G1-cEO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wmR-d5-10g"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Ccc-uY-xhn" appends="YES" id="UG3-d7-wqq"/>
