@@ -76,26 +76,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func zoomToUser(segControl: UISegmentedControl) {
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.Follow, animated: true)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        
-        let userLocation: CLLocation = location[0]
-        let latitude = userLocation.coordinate.latitude
-        let longitude = userLocation.coordinate.longitude
-        let latDelta: CLLocationDegrees = 0.05
-        let lonDelta: CLLocationDegrees = 0.05
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        self.mapView.setRegion(region, animated: true)
-
-        mapView.showsUserLocation = true
     }
     
     override func viewDidLoad() {
