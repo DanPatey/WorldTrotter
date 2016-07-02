@@ -44,11 +44,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         trailingConstraint.active = true
         
         // Set up zoom button
-        let zoomString = NSLocalizedString("Zoom", comment: "Zoom to current location")
-        let zoomControl = UISegmentedControl(items: [zoomString])
+        let zoomInString = NSLocalizedString("Zoom In", comment: "Zoom in to current location")
+        let zoomInFastString = NSLocalizedString("Zoom In Fast", comment: "Zoom in quickly to the current location")
+        let zoomControl = UISegmentedControl(items: [zoomInString, zoomInFastString])
+        
         zoomControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
-        zoomControl.selectedSegmentIndex = 4
-        zoomControl.addTarget(self, action: #selector(MapViewController.zoomToUser(_:)), forControlEvents: .TouchUpInside)
+        zoomControl.selectedSegmentIndex = 0
+        zoomControl.addTarget(self, action: #selector(MapViewController.zoomToUser(_:)), forControlEvents: .ValueChanged)
         zoomControl.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(zoomControl)
@@ -75,11 +77,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    func zoomToUser(segControl: UISegmentedControl) {
-        locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.Follow, animated: true)
+    func zoomToUser(zoomControl: UISegmentedControl) {
+        switch zoomControl.selectedSegmentIndex {
+        case 0:
+            locationManager = CLLocationManager()
+            locationManager.requestWhenInUseAuthorization()
+            mapView.showsUserLocation = true
+            mapView.setUserTrackingMode(.Follow, animated: true)
+        case 1:
+            locationManager = CLLocationManager()
+            locationManager.requestWhenInUseAuthorization()
+            mapView.showsUserLocation = true
+            mapView.setUserTrackingMode(.Follow, animated: false)
+        default:
+            break
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
