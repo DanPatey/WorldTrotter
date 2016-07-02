@@ -10,10 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     var mapView: MKMapView!
-    var locationManager: CLLocationManager!
+    var locationManager : CLLocationManager!
     
     override func loadView() {
         // Create a map view
@@ -48,7 +48,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let zoomControl = UISegmentedControl(items: [zoomString])
         zoomControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         zoomControl.selectedSegmentIndex = 4
-        zoomControl.addTarget(self, action: #selector(MapViewController.zoomToUser(_:)), forControlEvents: .TouchDown)
+        zoomControl.addTarget(self, action: #selector(MapViewController.zoomToUser(_:)), forControlEvents: .TouchUpInside)
         zoomControl.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(zoomControl)
@@ -81,6 +81,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        
+        let userLocation: CLLocation = location[0]
+        let latitude = userLocation.coordinate.latitude
+        let longitude = userLocation.coordinate.longitude
+        let latDelta: CLLocationDegrees = 0.05
+        let lonDelta: CLLocationDegrees = 0.05
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        self.mapView.setRegion(region, animated: true)
+
+        mapView.showsUserLocation = true
     }
     
     override func viewDidLoad() {
