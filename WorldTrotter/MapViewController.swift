@@ -14,6 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var mapView: MKMapView!
     var locationManager : CLLocationManager!
+    var annotationManager : MKPinAnnotationView!
     
     override func loadView() {
         // Create a map view
@@ -43,7 +44,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         leadingConstraint.active = true
         trailingConstraint.active = true
         
-        // Set up zoom button
+        // Set up zoom buttons
         let zoomInString = NSLocalizedString("Zoom In", comment: "Zoom in to current location")
         let zoomInFastString = NSLocalizedString("Zoom In Fast", comment: "Zoom in quickly to the current location")
         let zoomControl = UISegmentedControl(items: [zoomInString, zoomInFastString])
@@ -93,7 +94,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             break
         }
     }
-    
+        
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
